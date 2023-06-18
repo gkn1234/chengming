@@ -1,0 +1,19 @@
+{
+  "name": "@cmjs/build",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "yihai",
+  "license": "MIT",
+  "peerDependencies": {
+    "vite": ">=2.9.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "read-pkg-up": "^9.1.0"
+  }
+}

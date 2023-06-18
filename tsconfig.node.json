@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "allowJs": true,
+    "lib": ["ESNext"],
+    "types": ["node"],
+  },
+  "include": [
+    "packages/build/src",
+    "**/*.config.*",
+    ".eslintrc.js"
+  ]
+}
