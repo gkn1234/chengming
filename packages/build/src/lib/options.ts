@@ -31,20 +31,20 @@ export interface BuildLibOptions {
    * - true 使用 vite-plugin-dts 默认配置
    * - default 使用本工程通用的 dts 插件配置
    * - Object 传给插件的自定义配置
-   * @default true
+   * @default false
    */
   dts?: boolean | 'default' | dtsOptions;
 
   /**
-   * 是否打包出 es 文件。
+   * 是否打包出 es 格式的 mjs 文件。
    * @default true
    */
   es?: boolean;
 
   /**
-   * 是否打包出 umd 文件。
+   * 是否打包出 cjs 可用的 umd 文件。
    * @default true
-  */
+   */
   umd?: boolean;
 
   /**
@@ -79,6 +79,12 @@ export interface BuildLibOptions {
   minify?: BuildOptions['minify'];
 
   /**
+   * 构建时是否清空目录
+   * @default true
+   */
+  clear?: boolean;
+
+  /**
    * 是否启用 rollup-plugin-visualizer 进行产物分析，
    * @default false
    */
@@ -108,12 +114,13 @@ export function defaultBuildLibOptions(): Required<BuildLibOptions> {
     entry: 'src',
     fileName: '',
     outDir: 'dist',
-    dts: true,
+    dts: false,
     es: true,
     umd: true,
     full: false,
     writePkg: true,
     minify: false,
+    clear: true,
     visualizer: false,
     inspect: false,
     vue: false,

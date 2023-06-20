@@ -1,5 +1,4 @@
 const { defineConfig } = require('eslint-define-config');
-const importRules = require('eslint-config-airbnb-base/rules/imports');
 
 module.exports = defineConfig({
   env: {
@@ -18,13 +17,13 @@ module.exports = defineConfig({
     sourceType: 'module',
   },
   rules: {
-    'import/no-extraneous-dependencies': ['error', {
-      devDependencies: importRules
-        .rules['import/no-extraneous-dependencies'][1]
-        .devDependencies.concat([
-          '**/vite.config.{js,ts}',
-        ]),
-      packageDir: ['.'],
+    'import/no-extraneous-dependencies': 'off',
+    'import/prefer-default-export': 'off',
+
+    '@typescript-eslint/no-use-before-define': ['error', {
+      functions: false,
     }],
+
+    'operator-linebreak': ['error', 'after'],
   },
 });

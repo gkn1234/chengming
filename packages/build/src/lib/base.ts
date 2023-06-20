@@ -24,6 +24,7 @@ export async function baseBuildLibConfig(options?: BuildLibOptions) {
       lib: getLib(curOptions),
       minify: curOptions.minify,
       outDir: curOptions.outDir,
+      emptyOutDir: curOptions.clear,
       rollupOptions: {
         external: curOptions.full ? [] : getExternal(pkg),
       },

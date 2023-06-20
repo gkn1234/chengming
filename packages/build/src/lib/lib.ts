@@ -1,5 +1,5 @@
 import { LibraryOptions, LibraryFormats, BuildOptions } from 'vite';
-import { camelCase } from 'lodash-es';
+import camelCase from 'lodash/camelCase';
 import { BuildLibOptions } from './options';
 
 export function getLib(options: Required<BuildLibOptions>): LibraryOptions {

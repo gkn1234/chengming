@@ -2,18 +2,44 @@
   "name": "@cmjs/build",
   "version": "0.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/cmjs-build.umd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build"
   },
   "keywords": [],
-  "author": "yihai",
+  "author": {
+    "name": "yihai"
+  },
   "license": "MIT",
   "peerDependencies": {
-    "vite": ">=2.9.0"
+    "vite": ">=2.0.0",
+    "vue": ">=3.3.0"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    }
   },
   "dependencies": {
+    "@rollup/plugin-replace": "^5.0.2",
+    "@types/lodash": "^4.14.194",
+    "@vitejs/plugin-vue": "^4.2.3",
     "lodash": "^4.17.21",
-    "read-pkg-up": "^9.1.0"
-  }
+    "read-pkg-up": "^9.1.0",
+    "rollup-plugin-visualizer": "^5.9.0",
+    "vite-plugin-dts": "^2.3.0",
+    "vite-plugin-inspect": "^0.7.26",
+    "write-pkg": "^5.1.0"
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "@cmjs/build@0.0.0",
+  "exports": {
+    ".": {
+      "require": "./dist/cmjs-build.umd.js",
+      "import": "./dist/cmjs-build.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "module": "./dist/cmjs-build.mjs",
+  "types": "./dist/index.d.ts"
 }
